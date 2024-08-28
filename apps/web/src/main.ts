@@ -4,6 +4,12 @@ import typescriptLogo from "/typescript.svg";
 import { Counter } from "@repo/ui/counter";
 import { setupCounter } from "@repo/ui/setup-counter";
 
+// import * as dotenv from "dotenv";
+
+// dotenv.config({ path: "../../.env" });
+
+console.log('YOUR_STRING_VARIABLE: ', process.env.YOUR_STRING_VARIABLE)
+
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -15,6 +21,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     ${Header({ title: "Web" })}
     <div class="card">
       ${Counter()}
+       ${process.env.YOUR_STRING_VARIABLE}
     </div>
   </div>
 `;
